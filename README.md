@@ -1,10 +1,10 @@
-# Cercle unitaire trigonométrique : angle φ en degrés
+# Cercle unitaire trigonométrique : angle ϕ en degrés
 
 Figure dynamique du cercle unitaire, pour le cours « La trigonométrie au service de l'électricien » de la série « Du calcul au chantier ».
 
-- `index.html` : l'angle arrêté φ, en degrés.
+- `index.html` : l'angle arrêté ϕ, en degrés.
 
-Quand l'angle varie, c'est ωt ; quand il est arrêté, c'est φ.
+Quand l'angle varie, c'est ωt ; quand il est arrêté, c'est ϕ.
 
 Auteur : Arnaldo S. Attallah, P.Eng. (retraité), M. Sc. (INRS Énergie)
 
