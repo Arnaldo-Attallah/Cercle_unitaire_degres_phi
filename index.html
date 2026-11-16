@@ -25,7 +25,7 @@
   <h1>Cercle unitaire : l'angle ϕ arrêté, en degrés</h1>
   <p class="copy">© 2026 Arnaldo S. Attallah. Tous droits réservés. Reproduction interdite sans l'autorisation écrite de l'auteur.</p>
   <p class="intro"><strong>Quand l'angle varie, c'est ωt ; quand il est arrêté, c'est ϕ.</strong> Cette page montre l'angle arrêté ϕ, en degrés : choisissez un angle remarquable ou placez le curseur (0 à 90°) pour lire les six fonctions de ϕ. Dans un triangle rectangle, l'angle ϕ va de 0 à 90° : la figure montre donc le premier quart du cercle, agrandi. Pour voir l'angle ωt varier en radians, ouvrez la <a href="https://arnaldo-attallah.github.io/Cercle_unitaire_radians_wt/">version en radians (ωt)</a>.</p>
-  <svg id="fig" viewBox="0 30 970 545" role="img" aria-label="Premier quart du cercle unitaire"></svg>
+  <svg id="fig" viewBox="0 30 1140 545" role="img" aria-label="Premier quart du cercle unitaire"></svg>
   <div class="ctrl">
     <label for="deg">ϕ</label>
     <input id="deg" type="range" min="0" max="90" step="1" value="30" aria-label="Angle ϕ en degrés">
@@ -104,7 +104,11 @@
       el('rect', { x: PX, y: T + 50 + i * 42, width: 20, height: 20, rx: 4, fill: COL[r[1]] });
       el('text', { x: PX + 30, y: T + 66 + i * 42, 'font-size': 16, fill: '#1a1a1a' }, null, r[0]);
       el('text', { x: PX + 240, y: T + 66 + i * 42, 'text-anchor': 'end', 'font-size': 16, 'font-weight': 'bold', fill: '#1a1a1a' }, null, fmt(r[2]));
+      var oui = i < 3;
+      el('text', { x: PX + 350, y: T + 66 + i * 42, 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 'bold', fill: oui ? '#1B7F3B' : '#B3261E' }, null, oui ? 'OUI' : 'NON');
     });
+    el('text', { x: PX + 350, y: T + 18, 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 'bold', fill: '#1a1a1a' }, null, 'Utile aux');
+    el('text', { x: PX + 350, y: T + 36, 'text-anchor': 'middle', 'font-size': 14, 'font-weight': 'bold', fill: '#1a1a1a' }, null, 'électriciens ?');
     var notes = [['Pythagore, trois fois :', true], ['sin² ϕ + cos² ϕ = 1'], ['1 + tan² ϕ = sec² ϕ'], ['1 + cot² ϕ = csc² ϕ']];
     notes.forEach(function (n, i) { el('text', { x: PX, y: T + 330 + i * 26, 'font-size': 15, 'font-weight': n[1] ? 'bold' : 'normal', fill: '#1a1a1a' }, null, n[0]); });
     ['sec et csc suivent le rayon', 'prolongé : tirets alternés', 'bleu et jaune.'].forEach(function (txt, i) {
